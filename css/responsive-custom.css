@@ -1,0 +1,5 @@
+/* iPad (portrait) */
+@media (min-width: 320px) and (max-width: 579px) {
+.profile .content {
+	width: 300px;
+}

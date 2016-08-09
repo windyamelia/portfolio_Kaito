@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Vidia's Portfolio</title>
+
+		<meta name="description" content="Free download theme onepage, clean and modern responsive for all"/>
+		<meta name="keywords" content="responsive, html5, onepage, themes, template, clean layout, free web"/>
+		<meta name="author" content="Thomsoon.com"/>
+		
+		<link rel="shortcut icon" href="img/favicon.png"> 
+		
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="js/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/style-responsive.css" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    <script type="text/javascript">
+      jQuery(function ($) {
+          // $(".popup").niceScroll({styler:"fb",cursorcolor:"#e8403f", cursorwidth: '6', cursorborderradius: '10px', background: '#404040', spacebarenabled:false,  cursorborder: '', zindex: '1000'});
+          var config = {
+                                auto: true,
+                                pager: false,
+                                adaptiveHeight: true,
+                                minSlides: 1,
+                                maxSlides: 1,
+                                slideWidth: 520,
+                                slideMargin: 10,
+                                onSlideAfter: function ($slideElement, oldIndex, newIndex) {
+                                    // load the image file 
+
+                                    var imageelement = $slideElement.find('img');
+                                    imageelement.attr('src', imageelement.attr('imagesrc'));
+                                },
+                                onSliderLoad: function () {
+                                    $('.bxslider li img').css('display', 'block');
+                                }
+                              };
+        var sliders = new Array();
+        $('.bxslider').each(function(i, slider) {
+            sliders[i] = $(slider).bxSlider();
+        });
+        // }
+        //----- OPEN
+        $('[data-popup-open]').on('click', function(e)  {
+            // alert('tes tes');
+            var targeted_popup_class = jQuery(this).attr('data-popup-open');
+            $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+
+            $.each(sliders, function(i, slider) { 
+            slider.reloadSlider(config);
+            });
+            
+            e.preventDefault();
+        });
+     
+        //----- CLOSE
+        $('[data-popup-close]').on('click', function(e)  {
+            var targeted_popup_class = jQuery(this).attr('data-popup-close');
+            $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+     
+            e.preventDefault();
+        });
+     });
+    </script>
+    <script type="text/javascript">
+      // jQuery(function ($) {
+      //   $("#owl-demo").owlCarousel({
+      //     autoPlay : 3000,
+      //     stopOnHover : true,
+      //     navigation:true,
+      //     paginationSpeed : 1000,
+      //     goToFirstSpeed : 2000,
+      //     singleItem : true,
+      //     autoHeight : true,
+      //     transitionStyle:"fade"
+      //   });
+      // });
+    </script>
+    <script type="text/javascript">
+      // jQuery(function ($){
+      //   $('.bxslider').bxSlider({
+      //     auto: true,
+      //     minSlides: 1,
+      //     maxSlides: 1,
+      //     slideWidth: 360,
+      //     slideMargin: 10
+      //   });
+      // });
+    </script>
+    <!--<script src="js/bootstrap.min.js" type="text/javascript"></script>	
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+		
+</head>
+
+<body>
+
+
+<div class="preloader" id="preloader">
+    <div class="item">
+      <img src="img/loading.gif">
+    </div>
+</div>
+
+
+<div class="container">
+
+
+<!-- section start-page -->
+
+  <section class="start-page parallax-background" id="home">
+  
+    <div class="opacity background"></div> <!-- Opacity color -->
+      <div class="content">
+        <div class="text teks">
+        
+          <!-- <div class="logo intro">Hello, I'm</div> -->
+          <h1 class="intro">Hello, I'm</h1>
+          <h1 class="intro name">Vidia<br>Anindhita</h1>
+          <!-- <h1>Creative branding</h1><hr/> -->
+          
+          <div id="more-about-me">
+            <a href="#about-us"><div class="read-more read-m">More About Me</div></a>
+          </div>
+          
+        </div>
+        <div class="arrow-down"></div>
+      </div>
+  
+  </section>
+
+  <!-- section menu mobile -->
+  
+  <section class="menu-media menu-media-custom">
+  
+    <div class="menu-content">
+    
+      <div class="logo intro logobar">VAnindhita</div>
+      
+      <div class="icon"><img src="img/icons/menu-media-grey.png"/></div>
+    
+    </div>
+   
+  </section>
+
+  <div class="clear"></div>  
+    <ul class="menu-click menu-click-custom">
+        <a href="#home"><li href="#home">Home</li></a>
+        <a href="#about-us"><li href="#about-us">About Me</li></a>
+        <a href="#profile"><li href="#profile">Profile</li></a>
+        <a href="#projects"><li href="#projects">Projects</li></a>
+        <a href="#contact"><li href="#contact">Contact</li></a>
+    </ul>
+   
+   
+  <!-- section menu -->
+  
+  <section class="menu menu-custom">
+
+    <div class="menu-content menu-cont">
+    
+    <div class="logo intro logobar">VAnindhita</div>
+    
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-us">About Me</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  
+  
+  </section>
+  <!-- section about us -->
+  
+  <section class="about-us" id="about-us">
+  
+  <div class="content">
+  
+    <h1>ABOUT ME</h1>
+    <hr/>
+    <div class="profile-picture"><img src="img/image-kaito.png"></div>
+    <p class="title title-custom">I’m a UX enthusiast who was born in Jakarta, May 16th 1993. I have strong passion in art and technology. My dream is to bring innovation in art-based technology to help people, and develop good design as a solution to their problems.</p>
+  
+      <div class="column column-one">
+  
+        <a data-popup-open="popup-ux"><div class="circle-one ux"></div></a>
+    
+          <a class="text-about" data-popup-open="popup-ux">UX Design</a>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p> -->
+    
+      </div>
+  
+      <div class="column column-two">
+  
+        <a data-popup-open="popup-ui"><div class="circle-two ui"></div></a>
+    
+          <a class="text-about" data-popup-open="popup-ui">UI Design</a>
+    
+      </div>
+  
+  
+      <div class="column column-three">
+  
+        <a data-popup-open="popup-dev"><div class="circle-three dev"></div></a>
+    
+          <a class="text-about" data-popup-open="popup-dev">Development</a>
+    
+      </div>
+
+      <div class="column column-four">
+  
+        <a data-popup-open="popup-graphic"><div class="circle-three graphic"></div></a>
+    
+          <a class="text-about" data-popup-open="popup-graphic">Graphic Design</a>
+    
+      </div>   
+
+      <div class="column column-five">
+  
+        <a data-popup-open="popup-photo"><div class="circle-three photo"></div></a>
+    
+          <a class="text-about" data-popup-open="popup-photo">Photography</a>
+    
+      </div> 
+    
+  </div>
+  
+  </section>
+  
+  <div class="clear"></div>  
+
+  <!-- section Profile -->
+  
+  <section class="profile" id="profile">
+  
+  <div class="content">
+  
+    <h1>PROFILE</h1>
+    <hr/>
+  
+      <div class="column-one">
+  
+        <div class="circle-one"></div>
+    
+          <h2>EDUCATION</h2>
+          <hr class="hr"/>
+          <p><span class="bolder">SMA Negeri 1 Bogor<br>(High School)</span><br>2008 - 2012</p>
+          <p><span class="bolder">Informatics Engineering<br>Bandung Institute of Technology</span><br>2012 - present</p>
+    
+      </div>
+  
+      <div class="column-two">
+  
+        <div class="circle-two"></div>
+    
+          <h2>AWARDS</h2>
+          <hr class="hr"/>
+          <p><span class="bolder">3rd Winner of User Experience Design Competition at Gemastik 8, National Level, Indonesia</span><br>October 2015</p>
+          <p><span class="bolder">Best 100 apps at BestApp.ID Hackathon Competition National Level, Indonesia</span><br>November 2014</p>
+          <p><span class="bolder">Silver Medal at Graphic Design Competition State Level, Pennsylvania, USA</span><br>April 2011</p>
+          <p><span class="bolder">Young Indonesian Ambassador in Youth Exchange and Study (YES) to Pennsylvania, USA</span><br>July 2010 - June 2011</p>
+    
+      </div>
+  
+  
+      <div class="column-three">
+  
+        <div class="circle-three"></div>
+    
+          <h2>EXPERIENCES</h2>
+          <hr class="hr"/>
+          <p><span class="bolder">Graphic Designer</span><br>Bogor - Indonesia<br>March - August 2012</p>
+          <p><span class="bolder">Lab Assistant</span><br>Software Engineering Laboratoy<br>Bandung Institute of Technology<br>September 2014 - present</p>
+          <p><span class="bolder">UX Designer Intern</span><br>Mirum Agency Jakarta<br>June - August 2015</p>
+          <p><span class="bolder">Front End Developer Intern</span><br>PT Bukalapak.com<br>December 2015 - present</p>
+    
+      </div>  
+    
+      <!-- <div id="owl-demo" class="owl-carousel">
+        <div><img src="img/awards.png"></div>
+        <div><img src="img/education.png"></div>
+        <div><img src="img/awards.png"></div>
+        <div><img src="img/education.png"></div>
+        <div><img src="img/awards.png"></div>
+        <div><img src="img/education.png"></div>
+        <div><img src="img/awards.png"></div>
+        <div><img src="img/education.png"></div>
+        <div><img src="img/awards.png"></div>
+        <div><img src="img/education.png"></div>
+      </div> -->
+  </div>
+  
+  </section>
+  
+  <div class="clear"></div> 
+
+  <!-- <section>
+    <ul class="bxslider">
+      <li><img src="img/ui-designer.png" /></li>
+      <li><img src="img/image-kaito.png" /></li>
+    </ul>
+  </section>  -->
+
+  <!-- projects-->
+
+  <section class="portfolio projects" id="projects">
+
+
+    <div class="portfolio-margin">
+    
+      <h1>PROJECTS</h1>
+      <hr/> 
+    
+    <!-- 1 item portoflio-->
+    
+        <ul class="grid">
+        
+          <li>
+            <a data-popup-open="popup-project-1">
+              <img src="img/portfolio/1.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p>
+                  <p class="description"></p>   
+              </div>
+            </a>
+          </li>
+          
+          <!-- 2 item portoflio-->
+          
+          <li>
+            <a href="#" data-popup-open="popup-project-2">
+              <img src="img/portfolio/2.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p>
+                  <p class="description"></p>               
+              </div>
+            </a>
+          </li>      
+
+          <!-- 3 item portoflio-->
+          
+          <li>
+            <a href="#" data-popup-open="popup-project-3">
+              <img src="img/portfolio/3.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>           
+              </div>
+            </a>
+          </li>      
+
+
+          <!-- 4 item portoflio-->
+          
+          <li>
+            <a href="#" data-popup-open="popup-project-4">
+              <img src="img/portfolio/4.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>         
+              </div>
+            </a>
+          </li>    
+
+          <!-- 5 item portoflio-->
+          
+          <li>
+            <a href="#" data-popup-open="popup-project-5">
+              <img src="img/portfolio/5.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>            
+              </div>
+            </a>
+          </li>    
+          
+
+          <!-- 6 item portoflio-->
+          
+          <li>
+            <a href="#" data-popup-open="popup-project-6">
+              <img src="img/portfolio/6.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>           
+              </div>
+            </a>
+          </li>         
+           
+         <!-- 7 item portoflio-->
+          
+          <li>
+            <a href="#" data-popup-open="popup-project-7">
+              <img src="img/portfolio/7.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>           
+              </div>
+            </a>
+          </li>    
+          
+          <!-- 8 item portoflio-->
+          
+          <li>
+            <a href="#" data-popup-open="popup-project-8">
+              <img src="img/portfolio/8.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>           
+              </div>
+            </a>
+          </li>          
+          
+          <!-- 9 item portoflio-->
+          
+          <li>
+            <a href="#" data-popup-open="popup-project-9">
+              <img src="img/portfolio/9.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>           
+              </div>
+            </a>
+          </li>          
+
+          <!-- 10 item portoflio-->
+          
+          <li>
+            <a href="#" data-popup-open="popup-project-10">
+              <img src="img/portfolio/10.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>           
+              </div>
+            </a>
+          </li>         
+
+          <!-- 11 item portoflio-->
+          
+          <li>
+            <a href="#" data-popup-open="popup-project-11">
+              <img src="img/portfolio/11.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>           
+              </div>
+            </a>
+          </li>          
+ 
+          <!-- 12 item portoflio-->
+          
+          <li>
+            <a href="#" data-popup-open="popup-project-12">
+              <img src="img/portfolio/12.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>           
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" data-popup-open="popup-project-13">
+              <img src="img/portfolio/13.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>           
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" data-popup-open="popup-project-14">
+              <img src="img/portfolio/14.png" alt="Portfolio item" />
+                <div class="no-text hover-color">
+                  <p></p> 
+                  <p class="description"></p>           
+              </div>
+            </a>
+          </li> 
+          
+        </ul>  
+   
+   </div>   
+         
+   </section>
+
+  
+   <div class="clear"></div>  
+
+
+    <!-- Contact-->
+
+    <section class="contact contact-custom" id="contact">
+        <h1>Contact</h1>
+        <hr/>       
+      
+        <div class="content">
+
+          <p>Please kindly contact me via e-mail</p>
+          <p class="email">anindhitavidia@gmail.com</p>
+          <p>Or simply add me through social media</p>
+
+          <div class="social-media">
+          <div class="column-one">
+            <a href="https://www.facebook.com/vidianindhita?_rdr=p" target="_blank"><img src="img/logo_fb.png"></a>
+            <a href="https://www.facebook.com/vidianindhita?_rdr=p" target="_blank">facebook</a>
+          </div>
+
+          <div class="column-one">
+            <a href="https://twitter.com/vidianindhita" target="_blank"><img src="img/logo_twitter.png"></a>
+            <a href="https://twitter.com/vidianindhita" target="_blank">twitter</a>
+          </div>
+
+          <div class="column-one socmed-three">
+            <a href="https://www.linkedin.com/in/vidianindhita" target="_blank"><img src="img/logo_linkedin.png"></a>
+            <a href="https://www.linkedin.com/in/vidianindhita" target="_blank">linkedin</a>
+          </div> 
+
+          <div class="column-one socmed-four">
+            <a href="https://www.pinterest.com/vidianindhita/" target="_blank"><img src="img/logo_pinterest.png"></a>
+            <a href="https://www.pinterest.com/vidianindhita/" target="_blank">pinterest</a>
+          </div>
+          </div>     
+        
+        </div>
+      
+    </section>
+
+
+    <section class="footer footer-custom">
+      
+        <div class="last-quote"><h1>Thank<br>You</h1></div>
+        
+        <!-- <div class="copyright">© 2014. All Rights Reserved Thomsoon.com</div>         -->
+    
+    
+    </section>    
+    
+
+</div>
+
+
+	<!-- Scripts -->
+	
+	<!--<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>-->
+	<!--<script src="js/jquery-ui-1.10.4.min.js" type="text/javascript"></script>--> <!-- jQuery -->
+	<script src="js/jquery.nicescroll.js"></script> <!-- jQuery NiceScroll -->
+	<script src="js/jquery.sticky.js"></script> <!-- jQuery Stick Menu -->
+	<script src="js/masonry.pkgd.min.js"></script> <!-- All script -->
+	<script src="js/imagesloaded.pkgd.min.js"></script> <!-- All script -->	
+
+   <script>
+     $(function(){
+   
+       var $container = $('.grid');
+     
+       $container.imagesLoaded( function(){
+         $container.masonry({
+           itemSelector : 'li'
+         });
+       });
+     
+     });
+   </script>
+	<script src="js/jquery.parallax.js"></script> <!-- jQuery Parallax -->	
+	<script src="js/script.js"></script> <!-- All script -->	
+
+  <div class="popup" data-popup="popup-ux" id="popup-ux">
+    <div class="popup-inner inner-1">
+        <div class="popup-70">
+          <h2>UX <span>DESIGN</span></h2>
+          <p>I’ve been learning about User Experience since I was in third year of college, when I first learned about Human-Computer Interaction. I found out that UX is the core of each technology, it is bigger than just making user-friendly interface. My work as a UX designer started when I was working in Mirum Agency as a UX Designer Intern. I worked with professional to make engaging website and mobile apps. I learned and directly practice my UX knowledge through making prototype including user research, task analyzing, wireframing, and usability testing. Right now I’m doing a research about how to make good interaction design for deaf students to learn English as foreign language in mobile apps.</p>
+        </div>
+        <div class="popup-30 pop-ux">
+            <img class="img-about" src="img/UX-Design-large.png">
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-ux" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-ui" id="popup-ui">
+    <div class="popup-inner inner-2">
+        <div class="popup-30 pop-ui">
+          <img class="img-about" src="img/UI-Design-large.png">
+        </div>
+        <div class="popup-70">
+          <h2>UI <span>DESIGN</span></h2>
+          <p>My experience in making user interface began in my second year of college. I had realized good user interface was somehow necessary and important to user. Long time before I knew about UX, I had been implementing on making what was good UI for user. My work as UI designer is about making mock-ups for website and mobile apps. While making mock-ups, I always think about its usability, not just using design aspects how to make them beautiful.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p>-->
+        <a class="popup-close" data-popup-close="popup-ui" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-dev" id="popup-dev">
+    <div class="popup-inner inner-1">
+        <div class="popup-70">
+          <h2>DEVELOPMENT</h2>
+          <p>As an engineer, I do not just analyze about user. My knowledge from Informatics Engineering in Bandung Institute of Technology brings me more concept about coding. I mostly work as a front-end developer, especially in web development. I’m proficient in using HTML5 and CSS3. Right now I’m working as a Front-end Developer Intern at PT Bukalapak.com, one of the biggest online marketplace in Indonesia.</p>
+        </div>
+        <div class="popup-30 pop-dev">
+            <img class="img-about" src="img/development-large.png">
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-dev" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-graphic" id="popup-graphic">
+    <div class="popup-inner inner-2">
+        <div class="popup-30 pop-graphic">
+          <img class="img-about" src="img/graphic-design-large.png">
+        </div>
+        <div class="popup-70">
+          <h2>GRAPHIC <span>DESIGN</span></h2>
+          <p>I have an interest in graphic design since I was in elementary school. My passion in art brought me to learn about digital image from young age. I had been using Photoshop since I was 10 and tried to learn deeper about it since then. With interest in this field, I’ve been making a lot of logos, posters, brochures, yearbooks, etc. My professional experience as a graphic designer began when I worked at local digital creative company in my hometown, Bogor, Indonesia, back in 2012.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p>-->
+        <a class="popup-close" data-popup-close="popup-graphic" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-photo" id="popup-photo">
+    <div class="popup-inner inner-1">
+        <div class="popup-70">
+          <h2>PHOTOGRAPHY</h2>
+          <p>My other interest is photography. First time I wanted to be serious in photography was when I learned how to make photograph with manual camera, Pentax K1000. I also learned how to do chemical prints in darkroom. This interest is growing as a hobby since then. I love to take photograph whenever I travel. My biggest interest in photography is taking landscape photographs. With my basic knowledge about photography, I once had an experience to be a Photography Manager at International Student Energy Summit (ISES) 2015 in Bali, Indonesia.</p>
+        </div>
+        <div class="popup-30 pop-photo">
+            <img class="img-about" src="img/photography-large.png">
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-photo" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <!-- POPUP SLIDER -->
+
+  <div class="popup" data-popup="popup-project-1" id="popup-project-1">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="bxslider">
+            <li><img class="img-slider" src="img/portfolio/1/slider-1.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/1/slider-2.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/1/slider-3.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/1/slider-4.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/1/slider-5.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>Graphic Design</h2>
+          <p>There are several collections of my graphic design projects, including brochure, logo, yearbook cover, and t-shirt design.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-1" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-2" id="popup-project-2">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="bxslider">
+            <li><img class="img-slider" src="img/portfolio/2/slider-1.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-2.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-3.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-4.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-5.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-6.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-7.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-8.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-9.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-10.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-11.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-12.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-13.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-14.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-15.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/2/slider-16.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>Photography</h2>
+          <p>These are several collections of my photography projects.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-2" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-3" id="popup-project-3">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="bxslider">
+            <li><img class="img-slider" src="img/portfolio/3/slider-1.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-2.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-3.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-4.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-5.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-6.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-7.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-8.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-9.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-10.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-11.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-12.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-13.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-14.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-15.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-16.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/3/slider-17.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>Money Snap</h2>
+          <p>Money Snap is a mobile application that manage user’s daily spending. I worked with my two other friends, and I was responsible for the UX design. We decided to develop this prototype because we realized that people are lazy to manage their spending, especially teenagers. I utilized my basic knowledge about UX. I was very careful in designing this project. I wanted to create pleasurable, attractive, and wonderful apps yet was very usable and could change user’s behavior. By Money Snap, we then won 3rd Winner on UX Design Competition at Gemastik 8, National Level, in Indonesia.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-3" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-4" id="popup-project-4">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="bxslider" id="popup-project-4">
+            <li><img class="img-slider" src="img/portfolio/4/slider-1.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-2.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-3.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-4.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-5.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-6.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-7.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-8.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-9.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-10.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-11.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-12.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/4/slider-13.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>Lifebuoy Apps</h2>
+          <p>This is my first project as UX designer. I implemented user-centered design process to make enchanted mobile apps. Lifebuoy app is a sick-journal app that is used by moms to monitor their sick children. With this app, moms can discover why their children are infected and know what is the actual disease. This app can also monitor children’s daily life while they are sick and detect other disease around the area.
+          <br><br>
+          My work was to create personas based on user research, analyze the feature based on persona and feature mapping, and make wireframe through user flow, information architecture, and navigation design.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-4" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-5" id="popup-project-5">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="bxslider">
+            <li><img class="img-slider" src="img/portfolio/5/slider-1.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/5/slider-2.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/5/slider-3.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/5/slider-4.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/5/slider-5.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/5/slider-6.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/5/slider-7.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>Old-books</h2>
+          <p>Old-books is my first project that I utilized with my basic knowledge of Human-Computer Interaction. Old-books is a prototype of an online local bookstore that sells old college books and can only be used in specific university. The sellers and buyers are both from the same university. Other than selling feature, there are also calendar feature and chat feature.
+          <br><br>
+          I developed this prototype in a team consisting of 5 students. My responsibility was to design all the interface based on user requirements. I gathered the data through interview, questionnaire, and observation. Before I implemented it, I made the mockups using Adobe Photoshop.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-5" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-6" id="popup-project-6">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="bxslider" id="popup-project-6">
+            <li><img class="img-slider" src="img/portfolio/6/slider-1.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/6/slider-2.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/6/slider-3.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/6/slider-4.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/6/slider-5.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/6/slider-6.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>Sharity</h2>
+          <p>Sharity is a project that can make user donate to charity with a little amount of money. The idea is user can donate charity with their mobile account payment, so there’s no minimum payment for donation. This is a solution for people who are willing to donate but they don’t have much money. Albeit this is only a mobile apps prototype, this project won best 100 apps at BestApp.ID Hackathon Competition.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-6" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-7" id="popup-project-7">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="bxslider" id="popup-project-7">
+            <li><img class="img-slider" src="img/portfolio/7/slider-1.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/7/slider-2.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/7/slider-3.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>Lapor Taman</h2>
+          <p>Lapor Taman is one of my course assignment which could help the government to control parks in my city, Bandung. This website is made to help people complaining about parks’ condition in Bandung. People can send their complains so the government will recognize the mess. Besides, this website also gives some information about how things are going in the parks.<br><br>
+          What did I get?<br>
+          In this project, my responsibilities were making user friendly interface. I worked as a front-end programmer. By finishing this project I improved my front-end skill in using HTML, CSS, and Javascript. In this project I used Bootstrap as a CSS library. I learned about Bootstrap environment and how it worked.<br><br>
+          Link for the code: <a href="http://github.com/vidianindhita/Lapor-taman" target="_blank">github.com/vidianindhita/Lapor-taman</a></p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-7" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-8" id="popup-project-8">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="slider-custom">
+            <li><img class="img-slider" src="img/portfolio/8/pontek.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>Pontek's Search</h2>
+          <p>This project is a search engine that can crawl several news websites. User can search some news by writing the keyword. This web crawler is a tiny version of Google.  In this project I was being a front-end developer. I worked with HTML, CSS and Javascript. I didn’t use any library in this project, I developed it from scratch.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-8" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-9" id="popup-project-9">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="slider-custom">
+            <li><img class="img-slider" src="img/portfolio/9/rssep.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>RSSep</h2>
+          <p>This desktop-based application is a news reader like news feed. By using this application people can read some headline news from several news websites such as detik.com. In this project I worked as a front-end programmer. I made the interface using Java in IDE Visual Studio. I gained much knowledge in Java as developing this application.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-9" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-10" id="popup-project-10">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="bxslider">
+            <li><img class="img-slider" src="img/portfolio/10/slider-1.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/10/slider-2.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/10/slider-3.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/10/slider-4.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>Unilife</h2>
+          <p>Unilife is a mockup of web application. This app is a social media with the concept of gamification. The idea is to encourage university student to have passion in going to class. Whenever they go to class or do the assignment they get a credit. At some point, those credits can be replaced by a badge.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-10" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-11" id="popup-project-11">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="bxslider">
+            <li><img class="img-slider" src="img/portfolio/11/slider-1.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/11/slider-2.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/11/slider-3.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/11/slider-4.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/11/slider-5.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>Lodimana</h2>
+          <p>Lodimana is an idea of mobile app that can connect your group vacation friends. I revealed this idea because sometimes we are missing our friends in a group while on group vacation. This app can detect where are all of our group members using map and location and also on the same page we can chat in a group chat. Other than those features, there are also an itinerary feature and notes feature.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-11" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-12" id="popup-project-12">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="slider-custom">
+            <li><img class="img-slider" src="img/portfolio/12/tweetanalytics.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>MyTweetAnalytics</h2>
+          <p>The Tweet Analytics is a web-based application that can search any tweet based on keyword and categories. This project use Booyer-Moore and Knuth-Morris-Prat algorithms for crawling in Java. In this project I worked in making those algorithms more effective. I also worked in making the interface to it would be user friendly.</p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-12" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-13" id="popup-project-13">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="bxslider" id="popup-project-13">
+            <li><img class="img-slider" src="img/portfolio/13/slider-1.png" /></li>
+            <li><img class="img-slider" src="img/portfolio/13/slider-2.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>The Simplest-blog</h2>
+          <p>The Simplest Blog is a blog like Wordpress which user can login first to post their writing. In this blog user can edit and delete the post, comment on each post, and also upload photos. This blog was developed in JavaServer Page and JavaServer Faces with CSS and Javascript for the interface. In this project I focused on making the front-end from scratch.
+          <br><br>
+          What did I get?
+          Since this project was my first Java web programming, I gained so much knowledge of Java web programming. I learned how Java works in developing a website rather than HTML. Besides, I created the front-end from scratch, without any templates or CSS library. I improved my skills more in front-end programming by learning CSS and Javascript.
+          <br><br>
+          Link for the code: <a href="http://github.com/vidianindhita/TheSimplestBlog" target="_blank">github.com/vidianindhita/TheSimplestBlog</a></p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-13" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+
+  <div class="popup" data-popup="popup-project-14" id="popup-project-14">
+    <div class="popup-inner popup-slider">
+        <div class="popup-60">
+          <ul class="slider-custom" id="popup-project-14">
+            <li><img class="img-slider" src="img/portfolio/14/nautika.png" /></li>
+          </ul>
+        </div>
+        <div class="popup-40">
+          <h2>Nautika Website</h2>
+          <p>This website is own by Unit Selam Nautika ITB. This website contains all information about Nautika ITB including their events, contact, photos, staffs, and some articles about diving. The project was developed by basic HTML, CSS, and Javascript.<br><br>
+          What did I get?
+          This was my second web project. I barely knew HTML, CSS, and Javascript. By developing this website I gained so much knowledge about HTML, CSS, and Javascipt. Here, I started my front-end programing skill.<br><br>
+          Link: <a href="http://nautika.unit.itb.ac.id" target="_blank">nautika.unit.itb.ac.id</a></p>
+        </div>
+        <div class="clear"></div>
+        <!-- <p><a data-popup-close="popup-1" href="#">Close</a></p> -->
+        <a class="popup-close" data-popup-close="popup-project-14" href="#"><img src="img/close.png"></a>
+    </div>
+  </div>
+  <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <h3>Modal Body</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+  </div>
+</div> -->
+
+</body>
+
+</html>
